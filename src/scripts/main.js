@@ -58,7 +58,7 @@ installMediaQueryWatcher("(min-width: 600px)", function(matches) {
             scrollTrigger: {
                 trigger: ".header",
                 scrub: 1,
-                start: "start 20%
+                start: "start 20%"
                 end: "bottom"
             },
             y: () => {
