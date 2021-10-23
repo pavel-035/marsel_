@@ -1,3 +1,10 @@
+document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === "complete") {
+        document.querySelector('.preloader_box').style.display = 'none';
+        document.querySelector('body').style.overflow = 'auto';
+    }
+});
+
 $(window).on('scroll', function() {
     $(".addClassOnScroll").each(function() {
         var height = $(window).height();

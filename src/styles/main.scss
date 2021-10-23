@@ -46,6 +46,34 @@ body {
 
 .wrapper {
   background: #000;
+  position: relative;
+}
+
+.preloader_box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+.preloader {
+  border: vwSize(16) solid rgba(255, 255, 255, 0.2);
+  border-top: vwSize(16) solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: vwSize(120);
+  height: vwSize(120);
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .logo {
@@ -207,6 +235,12 @@ body {
     &__title {
       @include font(smSize(60), #fff, "Orbitron-Bold", 700, smSize(64));
     }
+  }
+  .preloader {
+    border: smSize(16) solid rgba(255, 255, 255, 0.2);
+    border-top: smSize(16) solid rgba(255, 255, 255, 0.5);
+    width: smSize(120);
+    height: smSize(120);
   }
 
   .header {
